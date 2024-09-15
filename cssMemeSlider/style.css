@@ -32,17 +32,19 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 2em;
   transition: 0.7s ;
 }
 h3 {
-  padding-right: 31%;
+ padding-right: 31%;
   color:rgb(9, 11, 0);
   font-size: 1.4em;
+  padding-bottom: 0.5em;
 }
 .slider-items .item img {
+  margin-bottom: 1em;
   max-width: 100%;
   height: auto;
+  border-radius: 1em;
 }
 .slider-items input {
   position: absolute;
@@ -56,19 +58,26 @@ h3 {
   justify-content: flex-end;
 }
 .slider-nav-item {
-  width: 1em;
-  height: 1em;
-  border: 0.2em solid rgb(9, 11, 0);
-  background-color: rgb(9, 11, 0);
-  border-radius: 1em;
-  margin: 0.4em;
+  width: 2.8em; 
+  height: 2.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.4s ease;
+  background: transparent;
 }
-
-.slider-nav-item:hover {
+.slider-nav-item .control {
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid rgb(9, 11, 0);
+  background-color: rgb(9, 11, 0);
+  border-radius: 1em;
+  transition: all 0.4s ease;
+}
+.slider-nav-item:hover .control {
   background-color: rgb(244, 240, 240);
-  border: 0.4em solid rgb(244, 240, 240);
+  border-color: rgb(244, 240, 240);
 }
 
 #s1:checked ~ .s1 {
@@ -92,19 +101,11 @@ h3 {
 }
 
 
-#s1:checked ~ .slider-nav label:nth-child(1) {
-  background-color: rgb(240, 221, 83);
-}
-#s2:checked ~ .slider-nav label:nth-child(2) {
-  background-color: rgb(240, 221, 83);
-}
-#s3:checked ~ .slider-nav label:nth-child(3) {
-  background-color: rgb(240, 221, 83);
-}
-#s4:checked ~ .slider-nav label:nth-child(4) {
-  background-color: rgb(240, 221, 83);
-}
-#s5:checked ~ .slider-nav label:nth-child(5) {
+#s1:checked ~ .slider-nav label:nth-child(1) .control,
+#s2:checked ~ .slider-nav label:nth-child(2) .control,
+#s3:checked ~ .slider-nav label:nth-child(3) .control,
+#s4:checked ~ .slider-nav label:nth-child(4) .control,
+#s5:checked ~ .slider-nav label:nth-child(5) .control {
   background-color: rgb(240, 221, 83);
 }
 
@@ -114,10 +115,20 @@ h3 {
 @media screen and (max-width: 320px) {
   h3 {
     margin-top: 4em;
-    padding-right: 0;
+    padding-right: 0.6em;
+    padding-left: 0.7em;
+  }
+
+  .h3 {
+    margin: 2em auto;
   }
   .slider-nav {
     margin-bottom: 6em;
     justify-content: center;
+  }
+
+  .slider-items .item img {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
