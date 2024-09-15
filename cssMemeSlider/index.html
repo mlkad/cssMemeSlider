@@ -3,9 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Baskervville+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Adaptive Slider</title>
 </head>
 <body>
-  gkfmd,
+  <div class="wrapper">
+    <div class="slider">
+      <input type="radio" name="slider" id="s1" checked>
+      <input type="radio" name="slider" id="s2">
+      <input type="radio" name="slider" id="s3">
+      <input type="radio" name="slider" id="s4">
+      <input type="radio" name="slider" id="s5">
+
+      <div class="slides">
+        <div class="meme" id="slide1">
+          <img src="images/img1.jpg" alt="Meme 1">
+          <h3>Когда слышишь новые айтишные сленги</h3>
+        </div>
+        <div class="meme" id="slide2">
+          <img src="images/img2.jpg" alt="Meme 2">
+          <h3>Когда до дедлайна таска несколько часов</h3>
+        </div>
+        <div class="meme" id="slide3">
+          <img src="images/img3.jpg" alt="Meme 3">
+          <h3>Когда сабмитнул таск, который делал месяц</h3>
+        </div>
+        <div class="meme" id="slide4">
+          <img src="images/img4.jpg" alt="Meme 4">
+          <h3>Когда не успел сдать таск</h3>
+        </div>
+        <div class="meme" id="slide5">
+          <img src="images/img5.jpeg" alt="Meme 5">
+          <h3>Когда вывел в консоль 'Hello, World!'</h3>
+        </div>
+      </div>
+
+      <div class="slider-nav">
+        <label for="s1" class="slider-nav-item"></label>
+        <label for="s2" class="slider-nav-item"></label>
+        <label for="s3" class="slider-nav-item"></label>
+        <label for="s4" class="slider-nav-item"></label>
+        <label for="s5" class="slider-nav-item"></label>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
