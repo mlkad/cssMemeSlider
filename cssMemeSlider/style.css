@@ -79,7 +79,10 @@ h3 {
   background-color: rgb(244, 240, 240);
   border-color: rgb(244, 240, 240);
 }
-
+.slider-nav-item:active .control {
+    background-color: rgb(244, 240, 240);
+    border-color: rgb(244, 240, 240);
+}
 #s1:checked ~ .s1 {
   margin-left: 0;
 }
